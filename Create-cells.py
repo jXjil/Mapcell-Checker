@@ -42,7 +42,7 @@ def find_files_with_coordinates(root_folder):
                     folders[(coords[0], coords[1])] += ' +' + folder
                 else:
                     folders[(coords[0], coords[1])] = folder
-    # Write the folder names to a CSV file
+    # Write the folder names to a XLS file
     wb = Workbook()
     ws = wb.active
     ws.title = 'Mapcells'
