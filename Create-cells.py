@@ -3,7 +3,7 @@ import tkinter as tk
 from tkinter import filedialog
 from tkinter import messagebox
 from openpyxl import Workbook
-from openpyxl.styles import PatternFill
+from openpyxl.styles import PatternFill, Alignment
 
 zomboid_path = ''
 output_path = ''
@@ -39,7 +39,7 @@ def find_files_with_coordinates(root_folder):
                 folder = os.path.basename(foldername)
                 # Add the folder name to the dictionary
                 if (coords[0], coords[1]) in folders:
-                    folders[(coords[0], coords[1])] += '+' + folder
+                    folders[(coords[0], coords[1])] += ' +' + folder
                 else:
                     folders[(coords[0], coords[1])] = folder
     # Write the folder names to a CSV file
@@ -53,10 +53,11 @@ def find_files_with_coordinates(root_folder):
         ws.cell(row=i+3, column=1).value = i
         for j in range(0, 66):
             cell = folders.get((str(j), str(i)), '')
-            if '+' in cell:
+            if ' +' in cell:
                 cell = '!' + cell
                 ws.cell(row=i+3, column=j+3).fill = PatternFill(start_color='FFFF0000', end_color='FFFF0000', fill_type='solid')
             ws.cell(row=i+3, column=j+3).value = cell
+            ws.cell(row=i+3, column=j+3).alignment = Alignment(vertical='justify')
     wb.save(output_path + '/Mapcells.xls')
 
 # Call the function with the zomboid folder
