@@ -48,10 +48,10 @@ def find_files_with_coordinates(root_folder):
     ws.title = 'Mapcells'
     ws.cell(row=1, column=2).value = 'X'
     ws.cell(row=2, column=1).value = 'Y'
-    for i in range(0, 66):
+    for i in range(0, 101):
         ws.cell(row=1, column=i+3).value = i
         ws.cell(row=i+3, column=1).value = i
-        for j in range(0, 66):
+        for j in range(0, 101):
             cell = folders.get((str(j), str(i)), '')
             if ' +' in cell:
                 cell = '!' + cell
