@@ -6,7 +6,7 @@ This Pythonscript crawls through all of your workshop folders and searches for e
 Then this will get the original foldername, which usually is the modname. The modname gets conjoined with both of the coords and put in a dictonary. If there are coordinates that are in use, the next modnames will be added with a plus.
 It then generates a .xls file, which can be opened in excel or the openoffice/libreoffice equivalent.
 
-This file is generated with a x- and y-axis labeled with the x- and y-coordinates. The script checks every cell starting at (0,0) and ending at (65,65) then compares that to the saved coords. Modname at these coordinates get added to the cell. If it detects a plus in the modnames, it will add an exclamation mark and paint the cell background red.
+This file is generated with a x- and y-axis labeled with the x- and y-coordinates. The script checks every cell starting at (0,0) and ending at (101,101) then compares that to the saved coords. Modname at these coordinates get added to the cell. If it detects a plus in the modnames, it will add an exclamation mark and paint the cell background red.
 # How to use
 There are multiple ways to use this.
 I created an .exe file for ease of use on your machines, if you don't want to install anything. Just run it and follow the instructions.
