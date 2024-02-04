@@ -31,7 +31,12 @@ Now you have to select any folder on your pc. This is where your .xls file will 
 
 Aaand that's it! When you open up your generated file all used cells will be filled in with the corresponding mod name. If there is more than one mod occupying the same cell, it will be highlighted in red and show all mod names.
 
+# Exdended features!
+
+In Version 2.0 I included an option to also create a tilemap for each cell of every mapmod in your modlist. It works by using the worldmap.xml in each folder, if one is supplied. The worldmap.xml file is broken down into cell coordinates which are also broken down to objects which in turn carry coordinates of each edge tile they occupy. Using some math it recreates every object and if one cell is used by multiple mods each mod will have a different color.
+This feature is probably only useful for modders or if you ever wanted to see what a ingame cell would look like in excel, whatever floats your boat.
+
 # Known issues
 If one workshop mod supplies multiple versions of a cell, they will be shown as conflicting. SecretZ is one example of this as it supplies four versions in one, which all occupy the same cells.
-# Example Mapcell.xls file
+# Example Mapcell.xlsx file
 This is a generated file for my subscribed workshop mods, if you want to see how it looks before you try it yourself.
